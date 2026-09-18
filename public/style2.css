@@ -1,0 +1,57 @@
+.navbar {
+    background-color: #28a745 !important;
+}
+
+body {
+    font-family: "Lexend", serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container2{
+    margin-top: 90px;
+}
+
+
+
+.btn1{
+    
+    border: #28a745 1px solid;
+    border-radius: 50px;
+    background-color: #28a745 ;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-family: "Lexend", serif;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+.btn2{
+    border: #ffc107 1px solid;
+    background-color: #ffc107;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: "Lexend", serif;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+.btn1:hover{
+    transform: scale(1.05);
+    background-color: white;
+    color: #28a745;
+}
+
+.btn2:hover{
+    transform: scale(1.05);
+    background-color: white;
+    color: #ffc107;
+}
+
+footer{
+    margin-top: 20px;
+}
+

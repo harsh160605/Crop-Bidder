@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers and Buyers Marketplace</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: "Lexend", serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            background-color: #28a745 !important;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #28a745, #218838);
+            color: white;
+            padding: 100px 0;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .btn-role {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border-radius: 50px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .btn-role:hover {
+            transform: scale(1.05);
+        }
+        .btn-farmer {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-buyer {
+            background-color: #ffc107;
+            color: black;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes appear{
+            from{
+                opacity: 0;
+                scale: 0.5;
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        .display-4{
+            font-family: "Lexend", serif;
+            font-weight:800;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Farmers & Buyers Marketplace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#choose-role">Choose Role</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to the Farmers & Buyers Marketplace</h1>
+            <p class="lead">Connecting farmers and buyers for seamless transactions.</p>
+            <a href="#choose-role" class="btn btn-light btn-lg mt-3">Get Started</a>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <h2 class="text-center">How It Works</h2>
+            <div class="row">
+                <div class="col-md-4 fade-in">
+                    <div class="card p-4 text-center">
+                        <h3>1. List Crops</h3>
+                        <p>Farmers list their crops with a base price.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card p-4 text-center">
+                        <h3>2. Place Bids</h3>
+                        <p>Buyers place bids on the listed crops.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card p-4 text-center">
+                        <h3>3. Sell Crops</h3>
+                        <p>Farmers choose the best bid & sell their crops.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">Benefits</h2>
+            <div class="row">
+                <div class="col-md-6 fade-in">
+                    <div class="card p-4">
+                        <h3>For Farmers</h3>
+                        <ul>
+                            <li>Get fair prices for your crops.</li>
+                            <li>Reach a wider market of buyers.</li>
+                            <li>Control when and to whom you sell.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 fade-in">
+                    <div class="card p-4">
+                        <h3>For Buyers</h3>
+                        <ul>
+                            <li>Access high-quality crops directly from farmers.</li>
+                            <li>Competitive bidding ensures the best prices.</li>
+                            <li>Transparent and secure transactions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Choose Role Section -->
+    <section id="choose-role" class="section">
+        <div class="container text-center">
+            <h2>Choose Your Role</h2>
+            <p>Are you a farmer or a buyer? Select your role to get started.</p>
+            <div class="mt-4">
+                <a href="farmer.html" class="btn btn-role btn-farmer me-3" >I'm a Farmer</a>
+                <a href="buyer.html" class="btn btn-role btn-buyer">I'm a Buyer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p>&copy; 2023 Farmers & Buyers Marketplace. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script> -->
+    <!-- Custom JavaScript for Fade-In Effect -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

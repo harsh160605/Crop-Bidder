@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Farmers & Buyers Marketplace</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#how-it-works">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#benefits">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8080/home/choose">Choose Role</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div class="ticker-container">
+            <div class="ticker-wrapper">
+                <div id="ticker" class="ticker">Loading crop prices...</div>
+            </div>
+        </div>
+
+
+
+        <!-- Hero Section -->
+    <section id="home" class="hero-section text-center">
+        <div class="container2">
+            <!-- <img src="/media/depositphotos_208416686-stock-photo-indian-farmer-holding-crop-plant.jpg" alt=""> -->
+            <h1 class="display-4">Welcome to the Farmers & Buyers Marketplace</h1>
+            <p class="lead">Connecting farmers and buyers for seamless transactions.</p>
+            <div class="wrapper">
+                <div class="link_wrapper">
+                  <a href="http://localhost:8080/home/choose" id="btn">Get Started</a>
+                  <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                      <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                    </svg>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <h2 class="text-center">How It Works?</h2>
+    <!-- work -->
+    <section class="cards" id="how-it-works">
+        
+      <div class="card w-25 fade-in" class="card">
+        <div class="card-body">
+            
+          <h5 class="card-title">1. List Crops</h5>
+          <p class="card-text">Farmers list their crops with a base price.</p>
+          <!-- <a href="#" class="btn btn-primary">Button</a> -->
+        </div>
+      </div>
+
+      <div class="card w-25" class="card">
+        <div class="card-body">
+          <h5 class="card-title">2. Place Bids</h5>
+          <p class="card-text" class="text-center">Buyers place bids on the listed crops.</p>
+          <!-- <a href="#" class="btn btn-primary">Button</a> -->
+        </div>
+      </div>
+
+
+      <div class="card w-25" class="card">
+        <div class="card-body">
+          <h5 class="card-title">3. Sell Crops</h5>
+          <p class="card-text" class="text-center">Farmers choose the best bid & sell their crops.</p>
+          <!-- <a href="#" class="btn btn-primary">Button</a> -->
+        </div>
+      </div>
+    </section>
+
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="section bg-light">
+            <div class="container">
+                <h2 class="text-center">Benefits</h2>
+                <div class="row">
+                    <div class="col-md-6 fade-in">
+                        <div class="card p-4">
+                            <h3>For Farmers</h3>
+                            <ul>
+                                <li>Get fair prices for your crops.</li>
+                                <li>Reach a wider market of buyers.</li>
+                                <li>Control when and to whom you sell.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 fade-in">
+                        <div class="card p-4">
+                            <h3>For Buyers</h3>
+                            <ul>
+                                <li>Access high-quality crops directly from farmers.</li>
+                                <li>Competitive bidding ensures the best prices.</li>
+                                <li>Transparent and secure transactions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer class="footer text-center">
+        <hr>
+        <p>&copy; 2023 Farmers & Buyers Marketplace. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
+    async function fetchCropPrices() {
+        try {
+            const response = await fetch("/crop-prices");
+            const crops = await response.json();
+            let tickerText = "🚜 Latest Crop Prices: ";
+            
+            crops.forEach(crop => {
+                tickerText += `${crop.name} - ₹${crop.base_price} | `;
+            });
+
+            document.getElementById("ticker").textContent = tickerText;
+        } catch (error) {
+            console.error("Error fetching crop prices:", error);
+        }
+    }
+
+    fetchCropPrices();
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1515276427842-f85802d514a2?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed; /* Replace with actual image */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+.container {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 128, 0, 0.3);
+    width: 400px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.btn {
+    background: #66bb6a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #388e3c;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 128, 0, 0.5);
+}
+/* 
+/* Added Crops Heading */
+.crop-list h3 {
+    font-size: 24px;
+    color: #388e3c; /* Green color for the heading */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px; /* Adds some space below the heading */
+    letter-spacing: 1px; /* Adds spacing between letters for a more modern look */
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for a soft effect */
+}
+
+/* Added Crops Box Styling */
+.crop-list-box {
+    border: 2px solid #388e3c; /* Green border around the box */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for the box */
+    width: 80%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+/* Added Crops Section */
+.crop-list {
+    text-align: center;
+}
+
+/* Product Card */
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 10px auto;
+    width: 90%;
+    position: relative;
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover Effect for Products */
+.product:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 128, 0, 0.2); /* A little larger shadow on hover */
+}
+
+/* Product Image Styling */
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Menu Button */
+.menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none;
+    padding: 5px;
+}
+
+.dropdown button {
+    background: none;
+    border: none;
+    color: red;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown button:hover {
+    background: #f8d7da;
+} 
+
+select{
+    width: 95%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    background: #66bb6a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #388e3c;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 128, 0, 0.5);
+}

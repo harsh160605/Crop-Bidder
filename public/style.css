@@ -1,0 +1,199 @@
+.navbar {
+    background-color: #28a745 !important;
+    opacity: 0.8;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lexend", serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.hero-section {
+    background: url('/media/index\ farmer.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 300px 0;
+    /* background-image:  url('/media/depositphotos_208416686-stock-photo-indian-farmer-holding-crop-plant.jpg') no-repeat center center; */
+    background-size: cover;
+}
+
+.container2{
+    margin-top: 90px;
+    transition: ease-in 5s;
+ 
+}
+
+.display-4 {
+    font-family: "Lexend", serif;
+    /* font-size: 2.5rem; */
+    font-weight: 700;
+    line-height: 1.2;
+    transition: margin-right 4s;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+
+
+.wrapper{
+    position: relative;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    margin: 0 auto; /* Center horizontally */
+    width: fit-content;
+  }
+  
+  .link_wrapper{
+    position: relative;
+  }
+  
+  #btn{
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #fff;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border: 3px solid #333;
+    transition: all .35s;
+    position: relative;
+  }
+  
+  .icon{
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transition: all .35s;
+  }
+  
+  .icon svg{
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: white;
+    transition: all .35s;
+  }
+  
+  #btn:hover{
+    width: 200px;
+    border: 3px solid white;
+    background: transparent;
+    color:white;
+  }
+  
+  #btn:hover + .icon{
+    border: 3px solid white;
+    border-radius: 50px;
+    
+    right: -25%;
+  }
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: ease-in-out 0.5s;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #28a745;
+    color: #fff;
+}
+
+footer{
+    background-color: #333;
+    width: 100%;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f8f9fa;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.ticker-wrapper {
+  display: flex;
+  white-space: nowrap;
+}
+
+.ticker {
+  display: inline-block;
+  padding-left: 100%;
+  animation: tickerMove 15s linear infinite;
+}
+
+@keyframes tickerMove {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+.navbar {
+  background-color: #28a745 !important;
+  opacity: 0.9;  /* Slightly increased opacity for clarity */
+  position: fixed; /* Ensure navbar stays fixed */
+  top: 0;
+  width: 100%;
+  z-index: 1050; /* Ensure navbar is always above other elements */
+}
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f8f9fa;
+  padding: 10px;
+  font-weight: bold;
+  position: relative;
+  margin-top: 60px; /* Adjusted to stay below navbar */
+  z-index: 1000; /* Keeps it above content but below navbar */
+}

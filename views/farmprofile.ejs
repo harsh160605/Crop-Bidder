@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer App</title>
+    <link rel="stylesheet" href="/farmprofits.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Farmer App</h1>
+    </header>
+    <main>
+   
+        <section class="profit-section">
+            <h2>Your Portfolio</h2>
+            <div class="profit-cards">
+                <div class="profit-card">
+                    <h3>Total Profit</h3>
+                    <p>₹ <span id="total-profit"><%= totalProfit %></span></p>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="action-buttons">
+                <button><a href="http://localhost:8080/home/choose/farmer/profile/add" style="text-decoration: none;">Add Crop</a></button>
+            </div>
+        </section>
+
+        <div class="crop-list" id="crop-list">
+            <% crops.forEach(crop => { %>
+                <div class="crop-card">
+                <h4><%= crop.name %></h4>
+                <p>₹<%= crop.base_price %></p>
+                <p>Current Price: ₹<%= crop.current_bid ? crop.current_bid : crop.base_price %></p>
+                <button onclick="sellCrop('<%= crop.crop_id %>', '<%= crop.current_bid ? crop.current_bid : crop.base_price %>')">
+                    Sell At ₹<%= crop.current_bid ? crop.current_bid : crop.base_price %>
+                </button>
+
+                
+                <button onclick="showBids('<%= crop.crop_id %>')">Show Bids</button>
+                <div id="bids-<%= crop.crop_id %>"></div>
+
+                </div>
+            <% }); %>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Farmer App. All rights reserved.</p>
+    </footer>
+    <script>
+        function sellCrop(cropId, price) {
+            fetch("/sell-crop", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ crop_id: cropId, price: price }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    location.reload(); // Reload the page to reflect changes
+                } else {
+                    console.error("Failed to update crop status");
+                }
+            });
+        }
+
+        
+        function showBids(cropId) {
+    fetch(`/home/choose/buyer/${cropId}/bids`)
+        .then(response => response.json())
+        .then(data => {
+            let bidsContainer = document.getElementById(`bids-${cropId}`);
+            bidsContainer.className = "bids-container"; // Apply CSS class
+            bidsContainer.innerHTML = "";
+
+            if (data.length === 0) {
+                bidsContainer.innerHTML = "<p>No bids yet.</p>";
+            } else {
+                let bidTable = `<table>
+                                    <tr>
+                                        <th>Buyer Name</th>
+                                        <th>Bid Amount</th>
+                                  
+                                    </tr>`;
+                data.forEach(bid => {
+                    bidTable += `<tr>
+                                    <td>${bid.buyer_name}</td>
+                                    <td>₹${bid.bid_amount}</td>
+                              
+                                 </tr>`;
+                });
+                bidTable += "</table>";
+                bidsContainer.innerHTML = bidTable;
+            }
+        })
+        .catch(error => console.error("Error fetching bids:", error));
+}
+
+    </script>
+    
+</body>
+</html>
+

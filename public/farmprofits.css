@@ -1,0 +1,257 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Replaced Arial with Roboto for a modern, professional look */
+    margin: 0;
+    padding: 0;
+    background-color: #f8faf9; /* Light, earthy cream for a clean background */
+    color: #333;
+    line-height: 1.6; /* Improved readability */
+}
+
+header {
+    background-color: #4a7b52; /* Deeper, earthy green for a richer header */
+    color: white;
+    padding: 1.5rem; /* Increased padding for elegance */
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem; /* Larger, bolder heading */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Subtle spacing for sophistication */
+}
+
+main {
+    padding: 3rem 2rem; /* Increased padding for a less cramped look */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333; /* Kept dark for contrast, but could use #4a7b52 for consistency */
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Profit Section */
+.profit-section {
+    background: linear-gradient(to bottom, #4a7b52, #5d8a6f); /* Gradient for richness */
+    color: white;
+    padding: 2.5rem; /* Increased padding */
+    border-radius: 12px; /* Rounded corners for modern look */
+    margin-bottom: 3rem; /* More spacing */
+    box-shadow: 0 8px 20px rgba(74, 123, 82, 0.3); /* Shadow for depth */
+}
+
+.profit-section h2 {
+    margin-top: 0;
+    font-size: 1.8rem; /* Larger heading */
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
+}
+
+.profit-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly wider cards */
+    gap: 2rem; /* Increased gap for breathing room */
+    padding: 1rem;
+}
+
+.profit-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly opaque white for contrast */
+    padding: 2rem; /* Increased padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+}
+
+.profit-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.profit-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem; /* Larger heading */
+    color: #d4a017; /* Warm gold for emphasis */
+}
+
+.profit-card p {
+    font-size: 2rem; /* Larger, bolder profit */
+    font-weight: 700;
+    margin: 0.75rem 0;
+    color: white;
+}
+
+/* Quick Actions */
+.quick-actions {
+    background-color: white;
+    padding: 2.5rem; /* Increased padding */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    margin-bottom: 3rem; /* More spacing */
+}
+
+.quick-actions h2 {
+    margin-top: 0;
+    font-size: 1.8rem; /* Larger heading */
+    font-weight: 700;
+    color: #4CAF50; /* Earthy green for heading */
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Increased gap */
+    margin-top: 1.5rem; /* More spacing */
+}
+
+.action-buttons button {
+    background: linear-gradient(to right, #4a7b52, #5d8a6f); /* Gradient green for richness */
+    color: white;
+    padding: 1rem 2rem; /* Larger, more clickable buttons */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1.1rem; /* Larger text */
+    font-weight: 500;
+    transition: all 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 12px rgba(74, 123, 82, 0.3); /* Subtle shadow */
+}
+
+.action-buttons button:hover {
+    background: linear-gradient(to right, #d4a017, #b8860b); /* Gold gradient for hover */
+    transform: scale(1.05); /* Slight scale on hover */
+    box-shadow: 0 8px 20px rgba(212, 160, 23, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Crop List */
+.crop-list {
+    margin-top: 3rem; /* Increased spacing */
+    margin-bottom: 6rem; /* More space above footer */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Increased gap */
+}
+
+.crop-card {
+    background-color: white;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    padding: 2rem; /* Increased padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+    text-align: center;
+}
+
+.crop-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.crop-card h4 {
+    margin-top: 0;
+    font-size: 1.5rem; /* Larger crop name */
+    color: #4a7b52; /* Earthy green */
+    font-weight: 700;
+}
+
+.crop-card p {
+    margin: 1rem 0; /* Increased spacing */
+    font-size: 1.2rem; /* Larger price */
+    color: #333;
+}
+
+.crop-card button {
+    background: linear-gradient(to right, #4a7b52, #5d8a6f); /* Gradient green */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem; /* Larger button */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1rem; /* Larger text */
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 12px rgba(40, 175, 62, 0.3); /* Subtle shadow */
+}
+
+.crop-card button:hover {
+    background: linear-gradient(to right, #d4a017, #b8860b); /* Gold gradient */
+    transform: scale(1.05); /* Slight scale on hover */
+    box-shadow: 0 8px 20px rgba(212, 160, 23, 0.5); /* Enhanced shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .profit-section, .quick-actions, .crop-card {
+        padding: 1.5rem;
+    }
+
+    .profit-card, .crop-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .action-buttons button, .crop-card button {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+.bids-container {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    text-align: center;
+}
+
+.bids-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bids-container th, 
+.bids-container td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: left;
+}
+
+.bids-container th {
+    background-color: #1bbb31;
+    color: white;
+    font-weight: bold;
+}
+
+.bids-container td {
+    background-color: #fff;
+    color: #333;
+}
+
+.bids-container p {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+}

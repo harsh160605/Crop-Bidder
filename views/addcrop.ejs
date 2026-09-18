@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer - Add Crops</title>
+    <link rel="stylesheet" href="/farmer.css">
+</head>
+<body>
+
+
+    <!-- Farmer Crop Input Section -->
+    <div class="container">
+        <h2>Add Crop</h2>
+        <form action="/home/choose/farmer/profile/add" method="POST">
+            <label>Crop Name</label>
+            <input type="text" name="name" placeholder="Crop Name" required>
+            <label>Variety</label>
+            <input type="text" name="variety" placeholder="Variety">
+            <label>Quantity</label>
+            <input type="number" name="quantity" placeholder="Quantity" required>
+            <label>Quality</label>
+            <!-- Quality Dropdown Instead of Text Input -->
+            <select name="quality" required>
+                <option value="" disabled selected>Select Quality</option>
+                <option value="Premium">Premium</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="Organic">Organic</option>
+            </select>
+            <label>Base Price</label>
+            <input type="number" name="base_price" placeholder="Base Price" required>  <!-- Make sure it's number -->
+            <label>Location</label>
+            <input type="text" name="location" placeholder="Location" required>
+            <label>Delivery Type</label>
+            <select name="delivery_option" required>
+                <option value="" disabled selected>Select Delivery</option>
+                <option value="Pickup">Pickup</option>
+                <option value="Delivery Available">Delivery Available</option>
+            </select>
+            <label>Contact Info</label>
+            <input type="text" name="contact_info" placeholder="Contact Info" required>
+            <label>Image Link:</label>
+            <input type="text" name="image_url" placeholder="Paste image URL here" required>
+            <button type="submit">Add Crop</button>
+        </form>
+    </div>
+
+    <!-- Crop List Box -->
+    <div class="crop-list-box">
+        <h3>Added Crops</h3>
+        <div class="crop-list" id="cropList">
+            <!-- Crops will be listed here -->
+        </div>
+    </div>
+
+ 
+
+</body>
+</html>
